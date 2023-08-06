@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container-main">
+      <div class="popup-container" id="popupComfirm">
+        <div class="wrapper">
+          <div class="card-switch">
+            <label class="switch">
+              <div class="flip-card__inner">
+                <div class="flip-card__front">
+                  <div class="title">Nhập thông tin</div>
+                  <div class="flip-card__form" action="">
+                    <input
+                      class="flip-card__input"
+                      name="email"
+                      placeholder="Tên của bạn"
+                      type="text"
+                      id="name-person"
+                    />
+                    <div class="popup-flip-title">Bạn là:</div>
+
+                    <div class="row mgt-10">
+                      <div class="row2">
+                        <input
+                          type="radio"
+                          class="radio-input"
+                          name="position"
+                          value="ban"
+                        />
+                        Bạn
+                      </div>
+                      <div class="row2">
+                        <input
+                          type="radio"
+                          class="radio-input"
+                          name="position"
+                          value="anh"
+                        />
+                        Anh
+                      </div>
+                      <div class="row2">
+                        <input
+                          type="radio"
+                          class="radio-input"
+                          name="position"
+                          value="chi"
+                        />
+                        Chị
+                      </div>
+                      <div class="row2">
+                        <input
+                          type="radio"
+                          class="radio-input"
+                          name="position"
+                          value="em"
+                        />
+                        Em
+                      </div>
+                      <div class="row2">
+                        <input
+                          type="radio"
+                          class="radio-input"
+                          name="position"
+                          value="khac"
+                        />
+                        Khác
+                      </div>
+                    </div>
+                    <button class="flip-card__btn" onclick="onClickSubmit()">
+                      Đồng ý
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-container" style="opacity: 0">
+        <div class="card-inner" id="main-card">
+          <div class="card-front" id="front-card" onclick="onClickFront()">
+            <p id="title-front">Thiệp Mời</p>
+            <div
+              class="front-container"
+              style="display: none"
+              id="front-container"
+            >
+              <div class="top-front">
+                <div class="top-front-title">Thời gian</div>
+
+                <div class="top-front-line">
+                  <div></div>
+                </div>
+                <div class="top-front-content">
+                  14:30.pm | August | 29 | 2023
+                </div>
+
+                <div class="top-front-content-1">(14:30, 29.08.2023)</div>
+              </div>
+              <div class="line-front"></div>
+              <div class="bottom-front">
+                <div class="bottom-front-title">Tổ chức tại</div>
+                <div class="top-front-line">
+                  <div></div>
+                </div>
+
+                <div class="bottom-front-content">
+                  Hội trường lớn, trường Đại học Giao Thông Vận Tải
+                </div>
+
+                <div class="bottom-front-content-1">
+                  (Số 3 Đ. Cầu Giấy, Láng Thượng, Đống Đa, Hà Nội)
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-back">
+            <div class="card-back-container">
+              <div class="wallpaper-card"></div>
+              <div class="avatar-card"></div>
+              <div class="content-container">
+                <div class="arrow-left-container" onclick="onClickBack()">
+                  <div class="arrow-item-container">
+                    <div class="arrow-left">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="arrow-right-container" onclick="onClickBack()">
+                  <div class="arrow-item-container">
+                    <div class="arrow-right">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="header-content">Thiệp mời dự lễ tốt nghiệp</div>
+                <div class="border-150">
+                  <div></div>
+                </div>
+                <div class="main-content">
+                  <div id="content-1"></div>
+                </div>
+                <div class="bottom-content">
+                  <div class="bottom-content-left">14:30.pm | 28.08.2023</div>
+                  <div class="bottom-content-right">Vũ Công Đoàn</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="script/script.js"></script>
